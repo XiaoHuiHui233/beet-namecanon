@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beet-namecanon"
+version = "1.0.0"
+description = "beets plugin: normalize translated artist names back to the MusicBrainz canonical Latin name"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "XiaoHuiHui233" }]
+keywords = ["beets", "beets-plugin", "musicbrainz", "metadata", "artist", "latin"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = [
+    "beets>=2.0",
+    "zhconv",
+]
+
+[project.entry-points."beets.plugins"]
+namecanon = "namecanon"
+
+[tool.setuptools]
+packages = ["namecanon"]
